@@ -43,6 +43,7 @@ class Stack:
     
 def main():
     stack1 = Stack()
+    print(stack1.is_empty())    # Expect True
     
     stack1.push('Melissa')
     stack1.push('Sean')
@@ -51,6 +52,16 @@ def main():
     stack1.push('Impa')
     
     print(stack1)
+    
+    print(stack1.pop())
+    print(stack1)
+    
+    print(stack1.peek())
+    
+    print(stack1.is_empty())    # Expect False
+    print(stack1.size())        # Expect 4
+    
+    
     
     
 main()
