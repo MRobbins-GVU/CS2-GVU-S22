@@ -1,23 +1,68 @@
-# Create an implementation of stacks 
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Mar 31 18:18:19 2022
+
+@author: mrobbins
+"""
 
 class Stack:
-    __init__():
-        self._items = []
+    
+    def __init__(self):
+        self._data = []
         
+    def push(self, item):
+        """ Add item to the end of the Stack """
+        self._data += [item]
+        # append also works, we just don't need both
+        # self._data.append(item) 
+        
+    def pop(self):
+        """ Removes the last item from the Stack """
+        # Grab the last item
+        last = self._data[-1] 
+        
+        # Remove the last item and save the _data list
+        self._data = self._data[:-1]
+        
+        # Return that item we grabbed
+        return last
+        
+    
+    def peek(self):
+        """ Shows the last item in the Stack, without removing it """
+        return self._data[-1] 
+        
+    def is_empty(self):
+        return self._data == []
+    
+    def size(self):
+        return len(self._data)
+    
+    def __str__(self):
+        return str(self._data)
+    
 def main():
     stack1 = Stack()
-    # stack1.push(12)
-    # stack1.push(4)
-    # print(stack1.peek())
+    print(stack1.is_empty())    # Expect True
     
-    # val1 = stack1.pop()
-    # print(val1)
-    # print(stack1.is_empty()) #expecting False
-    # print(stack1.size()) #expecting 1
+    stack1.push('Melissa')
+    stack1.push('Sean')
+    stack1.push('Zelda')
+    stack1.push('Midna')
+    stack1.push('Impa')
     
-    # val2 = stack1.pop()
-    # print(val2)
-    # print(stack1.is_empty()) #expecting True
-    # print(stack1.size()) #expecting 0
+    print(stack1)
+    
+    print(stack1.pop())
+    print(stack1)
+    
+    print(stack1.peek())
+    
+    print(stack1.is_empty())    # Expect False
+    print(stack1.size())        # Expect 4
     
     
+    
+    
+main()
+
