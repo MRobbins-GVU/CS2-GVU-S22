@@ -38,6 +38,18 @@ class Stack:
     def size(self):
         return len(self._data)
     
+    def reverse_stack(self):
+        new_stack_items = []
+        # Go through every item of the stack (maybe a while loop?)
+        
+            # Grab the top item
+        
+            # Add that top item to a new list as the bottom item
+            
+            # Remove the top item
+        
+        # Save the new list to the variable
+    
     def __str__(self):
         return str(self._data)
     
