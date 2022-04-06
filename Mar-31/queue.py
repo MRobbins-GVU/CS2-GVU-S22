@@ -46,13 +46,16 @@ def main():
     queue1.insert('Wishes')
     queue1.insert('Oreo')
     queue1.insert('Ginger')
-    print(queue1)
+    print(queue1) #should be Maxx, Wishes, Oreo, Ginger
     
-    print(queue1.remove()) 
-    queue1.is_empty()           # False
-    queue1.size()               # Expect 3
+    queue1.reverse_order()
+    print(queue1) #should be Ginger, Oreo, Wishes, Maxx
     
-    print(queue1.peek())
+    # print(queue1.remove()) 
+    # queue1.is_empty()           # False
+    # queue1.size()               # Expect 3
+    
+    # print(queue1.peek())
     
 main()
 
