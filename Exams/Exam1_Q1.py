@@ -24,7 +24,7 @@ class Die:
         return str(self.value)
     
 def main():
-    die1_value = int(input("Enter the number of sides for the die: ")
+    die1_value = int(input("Enter the number of sides for the die: "))
 
     die1 = Die(die1_value) 
     
