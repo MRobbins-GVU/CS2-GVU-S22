@@ -20,26 +20,23 @@ def insertion_sort(items):
                 # value but less than the next value
         
         # j is where we are at in the comparison
-        j = 0
+        j = i - 1
         right_item = items[j]
         
         # if we make it in the while loop, we are not home yet.
-        while comp_item < right_item:
-            print("made it!")
-            right_item = items[j+1]
-            
-            j += 1
-            
-        # After the while, we've found home: j??
-        # Insert that unsorted item in it's proper place
-        home = "foobar"
-        temp = items[home]
-        items[home] = comp_item
-        
+        while comp_item < right_item and j >= 0:
+            #swap comp_item and right_item
+            temp = items[j]
+            items[j] = comp_item
+            items[j + 1] = temp
             
             
+            #move right_item one space
+            right_item = items[j-1]
             
-        print("end of while")
+            j -= 1
+            
+            print(items)
         
     # Return the sorted list
     return items
